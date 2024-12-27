@@ -9,9 +9,6 @@ THIS TOOL IS CREATED FOR EDUCATIONAL PURPOSE, DON'T MISUSE IT.
 <img width="527" alt="image" src="https://github.com/user-attachments/assets/e111834a-f143-4d4a-a398-fd809d52be79" />
 
 
-
-Here are some cool lines with hacking-themed emojis you can add to your ghostswitch.py description:
-
 💻 "Master the shadows with ghostswitch.py – your stealthy Python toolkit for seamless control! 👾✨"
 
 🛡️ "Harness the power of anonymity with ghostswitch.py – because in the digital jungle, it's hunt or be hunted. 🕶️⚡"
