@@ -41,6 +41,8 @@ Here are some cool lines with hacking-themed emojis you can add to your ghostswi
 
    "Feel free to reach out! If you like this tool, buy some coffee for me ☕❤️"
 
+   follow me on YT-https://www.youtube.com/channel/UC72XvkIKLpUSTIwwJSXsVfA
+
 
 
    
