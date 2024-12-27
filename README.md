@@ -2,6 +2,10 @@
 
 GhostSwitch is a Python-based tool that ensures your anonymity by automatically rotating your IP address at regular intervals using the Tor network. Designed for privacy enthusiasts, GhostSwitch guarantees secure, encrypted, and anonymous data flow.
 
+Using this tool, U can change your physical ip address 😉
+
+THIS TOOL IS CREATED FOR EDUCATIONAL PURPOSE, DON'T MISUSE IT.
+
 <img width="527" alt="image" src="https://github.com/user-attachments/assets/e111834a-f143-4d4a-a398-fd809d52be79" />
 
 
@@ -32,4 +36,12 @@ Here are some cool lines with hacking-themed emojis you can add to your ghostswi
    ```bash
    git clone https://github.com/yourusername/GhostSwitch.git
    cd GhostSwitch
+   pip3 install -r requirements.txt
+   python3 ghost-swithc.py
+
+   "Feel free to reach out! If you like this tool, buy some coffee for me ☕❤️"
+
+
+
+   
    
