@@ -1,0 +1,8 @@
+---
+### **requirements.txt**
+List the dependencies for your script:
+```plaintext
+requests
+stem
+colorama
+argparse
