@@ -38,7 +38,11 @@ THIS TOOL IS CREATED FOR EDUCATIONAL PURPOSE, DON'T MISUSE IT.
 
    "Feel free to reach out! If you like this tool, buy some coffee for me ☕❤️"
 
-   follow me on YT-https://www.youtube.com/channel/UC72XvkIKLpUSTIwwJSXsVfA
+   Tron-TEZXKUFMfCbZ8TvJ3vCweHgxeA1NHDxrfQ
+   Btc- 1DW524Rv7k5ac7E9KR1XV447FRmKvpRL7F
+
+If YOU Have Project Or Need Anything You Can Reachout or Join Our TG 
+https://t.me/+KMfapjOaRqY1YWE1
 
 
 
