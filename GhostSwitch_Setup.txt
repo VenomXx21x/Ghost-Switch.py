@@ -1,0 +1,94 @@
+
+### Setting Up GhostSwitch with Tor
+
+1. **Install Tor**
+    - Install Tor on Linux:
+      ```bash
+      sudo apt update
+      sudo apt install tor -y
+      ```
+    - Verify Installation:
+      ```bash
+      tor --version
+      ```
+    - Start the Tor Service:
+      ```bash
+      sudo systemctl start tor
+      sudo systemctl enable tor
+      ```
+    - Check Tor Service Status:
+      ```bash
+      sudo systemctl status tor
+      ```
+
+2. **Configure the `torrc` File**
+    - Open the `torrc` File:
+      ```bash
+      sudo nano /etc/tor/torrc
+      ```
+    - Add or Modify These Lines:
+      ```plaintext
+      ControlPort 9051
+      HashedControlPassword <hashed_password>
+      CookieAuthentication 1
+      MaxCircuitDirtiness 10
+      ```
+      - **ControlPort 9051:** Allows GhostSwitch to communicate with Tor for IP changes.
+      - **HashedControlPassword:** Replace `<hashed_password>` with a hashed password for authentication (see step below).
+      - **CookieAuthentication 1:** Enables secure control via cookies.
+      - **MaxCircuitDirtiness 10:** Forces Tor to change circuits after 10 seconds.
+    - Generate a Hashed Password:
+      ```bash
+      tor --hash-password "your_password_here"
+      ```
+      Copy the output and paste it into the `torrc` file in place of `<hashed_password>`.
+    - Save and Exit:
+      - Press `Ctrl+O` to save the file.
+      - Press `Ctrl+X` to exit Nano.
+    - Restart Tor to Apply Changes:
+      ```bash
+      sudo systemctl restart tor
+      ```
+
+3. **Configure Your Browser to Use Tor Proxy**
+    - **Firefox:**
+      - Open Proxy Settings:
+        - Go to `Settings` → `General` → `Network Settings` → Click on **Settings** under "Configure Proxy Access to the Internet."
+      - Set the Proxy:
+        - **SOCKS Host:** `127.0.0.1`
+        - **Port:** `9050`
+        - **SOCKS Version:** 5
+        - Enable **Proxy DNS when using SOCKS v5**.
+      - Save the Settings.
+    - **Other Browsers (e.g., Chrome):**
+      - Use an extension like **FoxyProxy** to configure SOCKS proxy settings for Chrome.
+
+4. **Modify `about:config` in Firefox**
+    - Access `about:config`:
+      - Type `about:config` in the Firefox address bar and press **Enter**.
+      - Accept the warning message.
+    - Search for `network.proxy.socks_remote_dns`:
+      - Set its value to **true**.
+
+5. **Verify Tor and Proxy Settings**
+    - Check if Tor is Working:
+      - Visit [https://check.torproject.org](https://check.torproject.org) in your browser.
+      - If configured correctly, it will say, *"Congratulations. This browser is configured to use Tor."*
+    - Test IP Rotation with GhostSwitch:
+      - Run the GhostSwitch script and monitor the IP changes.
+      - Verify that your browser’s IP address matches the one shown by GhostSwitch.
+
+6. **(Optional) Troubleshooting Tips**
+    - **If Tor Doesn't Start:**
+      - Check the logs for errors:
+        ```bash
+        journalctl -u tor -f
+        ```
+      - Fix any issues like port conflicts or missing settings in the `torrc` file.
+    - **If IP Doesn't Change:**
+      - Increase the `MaxCircuitDirtiness` in `torrc`.
+      - Ensure your script sends the `NEWNYM` signal correctly to `ControlPort 9051`.
+
+---
+
+This setup ensures Tor works seamlessly with your browser and GhostSwitch for anonymous and encrypted traffic flow.
